@@ -1,0 +1,45 @@
+component style
+global style
+make a new file for global style
+internal style
+style in component.ts file
+load multiple css files in component
+
+
+in styling this an component level styling only - app.css or profile.css
+
+global style - style.css it will configure in angular.json
+
+if you want new global style file, we can make it configure in angular.json  
+
+"style" :[
+    "src/styles.css",
+    "src/theme.css",
+]
+
+internal style - 
+within the component html file
+<style>
+</style>
+
+inline style
+
+<h1 style="backgroud-color:red;> </h1>
+
+
+component.ts file write css
+
+@Component({
+    template:'',
+    styles: ["h1{color:green}"]
+})
+
+
+user component - 
+
+button.css
+user.css
+
+@Component({
+    styleUrls:['./button.css','./user.css']
+})

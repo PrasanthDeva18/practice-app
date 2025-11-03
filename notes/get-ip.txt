@@ -1,0 +1,4 @@
+get value with input event
+get value with template reference variable
+set value on button click
+

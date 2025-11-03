@@ -1,0 +1,5 @@
+why we need to define type
+define type of property
+define multi type to property
+define type of function params
+cal function with params on button click

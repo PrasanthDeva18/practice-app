@@ -1,0 +1,65 @@
+angular is a framework used to build web application
+its build a single page application
+
+current version of angular v20
+
+--need to learn zone.js vs zoneless---
+
+how can we write the let, var, const inside class component using methods only, not oustide the method cls we can able to write
+
+
+file and structure
+
+imp files for angular
+code flow
+files not related projects 
+folder uses
+
+interview qn
+
+
+package.json -> its maintaining all the version of the package
+
+-scripts
+-dependecies
+-dev dependecies
+
+node_modules
+tsconfig.ts - config our typescript, where output file will store, when we will use some code, ecma script version
+
+tsconfig.ts vs tsconfig.app.json
+tsconfig.app.json - used to configure the src folder
+
+
+index.html - entry point of our applcication, it will tell which component to display on the first
+manin.ts - entry point of our application
+
+
+what is interpolation
+display the data in the html using interpolation {{}}
+
+limitation
+data assignment is not possible
+cannot create no data variable
+increment and decremnt its possible
+for loop directly
+
+What is angular cli - command line interface - create, build, test, deploy the application
+find all command
+imp command
+
+
+ng help - to get a commands
+
+ng new appname - it will create new fresh application
+ng serve - to run the application
+ng generate componentname - to create the component
+ng generate pipe loginpipe - to create the pipe
+ng build - it will create the build file
+
+
+ng generate component
+ng generate class
+ng generate gaurd
+ng generate 
+

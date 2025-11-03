@@ -1,0 +1,41 @@
+What are components
+Component in angular
+how to make and use component
+files of component
+
+components -> parts of the system, we can use one component into another component
+
+app.css
+app.html
+app.spec.ts
+app.ts
+
+ng generate component login - it will create the component inside the app folder
+ng g c signup
+
+it will create login component when i call this use the selector name of the component in the app.html 
+and also import the login component inside app.ts file as well
+
+<app-login></app-login>
+
+
+
+custom component
+
+in creating a component first letter should be smaller
+
+
+import { Component } from "@angular/core";
+
+@Component({
+    selector : 'app-profile',
+    template : '<h1>Prasanth Deventhiran</h1>',
+    style: 'h1{color:'red'}'
+})
+
+export class ProfileComponent{
+
+}
+
+if you are using html element as selector yes it working but its not good to use
+

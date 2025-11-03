@@ -1,0 +1,21 @@
+make a button
+define a function
+call a function on button click
+call a function from other function
+
+--html
+<button (click)="show()">hello</button>
+
+--ts file
+export class ProfileComponent{
+    show(){
+        console.log("it will showed")
+        this.toPop()
+    }
+
+    toPop(){
+
+    }
+}
+
+if you are calling same class method to another class method in same class we have to put this keyword

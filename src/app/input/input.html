@@ -1,0 +1,5 @@
+<p>input works!</p>
+<p>{{ username }}</p>
+<input #refusername (change)="setUserInput($event)" value="{{ username }}" />
+<button (click)="setUserName()">Set Input Value</button>
+<button (click)="getUserName(refusername.value)">Get Input Value</button>

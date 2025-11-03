@@ -3,9 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
 import { Counter } from './counter/counter';
+import { Input } from './input/input';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, Counter],
+  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

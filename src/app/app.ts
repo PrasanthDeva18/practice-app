@@ -4,9 +4,10 @@ import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
 import { Counter } from './counter/counter';
 import { Input } from './input/input';
+import { IfElse } from './if-else/if-else';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input],
+  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input,IfElse],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

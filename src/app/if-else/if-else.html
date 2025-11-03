@@ -1,0 +1,10 @@
+<p>if-else works!</p>
+<button (click)="hide()">Hide</button>
+<button (click)="show()">Show</button>
+<button (click)="hideAndShow()">{{ isShow ? 'hide' : 'show' }}</button>
+@if(isShow) {
+<div style="width: 100px; height: 100px; background-color: yellow"></div>
+} @else {
+<div style="width: 100px; height: 100px; background-color: green"></div>
+
+}

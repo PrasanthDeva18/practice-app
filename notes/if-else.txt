@@ -1,0 +1,19 @@
+define property for if else condition
+apply if else condition
+hide and show with button click
+toggle with button click
+update button with text toggle
+
+
+if-else in angular
+
+app.component.html
+
+----syntax----
+@if(condition){
+    <div></div>
+} @else if(condition){
+    <div></div>
+} else {
+    <div></div>
+}

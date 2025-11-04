@@ -4,3 +4,29 @@ In the event
 | ---------- | ------------------------------------------ | ----------------------------- |
 | `(change)` | When input loses focus or Enter is pressed | Form submission, final value  |
 | `(input)`  | On every keystroke                         | Live preview, instant updates |
+
+
+
+make function - call function on click
+call function on input field event, focus, blur, and input
+mouse event
+check event type
+
+
+
+button - (click)="functionname($event)"
+$event- for event to get the properties of the button
+
+
+--mouseenter
+(mouseenter)="functionanem($event)"
+(mouseleave)="functionname($event)"
+
+
+--input
+
+(input)
+
+---multiple event in element
+(focus)="functionname($event)" - click inside the input it will triggered
+(blur)="functionname($event)" - click outside the input will trigreer

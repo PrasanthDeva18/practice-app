@@ -1,0 +1,28 @@
+<p>for-loop works!</p>
+
+<p>{{ item[0] }}</p>
+<p>{{ item[1] }}</p>
+
+@for(i of item;track i){
+<p>{{ i }}</p>
+}
+<hr />
+
+<!-- The track tells Angular:
+“How can I uniquely identify each item in this list?” -->
+
+<!-- Without tracking -->
+<!-- If you update one user (or reorder them), Angular doesn’t know which item changed.
+➡️ It destroys and recreates all elements = bad for performance. -->
+
+<!-- Here, Angular uses user.id as a unique identifier.
+So if one user changes, Angular only updates that user’s DOM element — not all of them.
+
+⚡ Result: smoother performance, fewer DOM operations. -->
+
+@for(i of arrObj;track i.name; let id = $index){
+<p>{{ id + 1 }}</p>
+<p>{{ i.name }}</p>
+<p>{{ i.age }}</p>
+<button (click)="triggeredBy(i.name)">click to view</button>
+}

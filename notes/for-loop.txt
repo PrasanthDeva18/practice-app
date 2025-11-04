@@ -1,0 +1,27 @@
+template file is html file of component
+
+make a array of users
+apply for loop on it
+apply for loop on array of object
+generate unique id
+make a button and click event inside loop
+
+access the array of value using index in template file
+
+
+a = ['Prasanth', 'Deva', 'Vennila']
+
+.html
+{{a[0]}}
+{{a[1]}}
+{{a[2]}}
+
+if you want get more value use for directive
+
+@for(variablename of iteratearr;track variablename;let id=$index){
+
+}
+
+
+
+

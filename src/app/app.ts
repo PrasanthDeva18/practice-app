@@ -5,9 +5,11 @@ import { ProfileComponent } from './profile/profile';
 import { Counter } from './counter/counter';
 import { Input } from './input/input';
 import { IfElse } from './if-else/if-else';
+import { SwitchCase } from './switch-case/switch-case';
+import { ForLoop } from './for-loop/for-loop';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input,IfElse],
+  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input, IfElse, SwitchCase, ForLoop],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

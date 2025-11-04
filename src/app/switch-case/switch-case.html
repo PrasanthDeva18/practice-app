@@ -1,0 +1,21 @@
+<p>switch-case works!</p>
+
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('orange')">Orange</button>
+
+<input type="text" (change)="handleColor($event)" />
+<input type="text" (input)="handleColor($event)" />
+
+@switch (color) { @case ('red') {
+<p style="color: red">Prasanth</p>
+} @case ('green') {
+<p style="color: green">Prasanth</p>
+} @case ('yellow') {
+<p style="color: yellow">Prasanth</p>
+} @case ('orange') {
+<p style="color: orange">Prasanth</p>
+} @default {
+<p style="color: black">Prasanth</p>
+} }

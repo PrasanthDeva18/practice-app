@@ -1,0 +1,15 @@
+when we should use switch case
+make basic switch statement
+switch case with button
+switch case with input field
+
+switch was introduced in angular 18
+
+@switch(statement){
+    @case(value){
+        
+    }
+    @defaul{
+        
+    }
+}

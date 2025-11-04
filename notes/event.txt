@@ -1,0 +1,6 @@
+In the event 
+
+| Event      | When It Fires                              | Use Case                      |
+| ---------- | ------------------------------------------ | ----------------------------- |
+| `(change)` | When input loses focus or Enter is pressed | Form submission, final value  |
+| `(input)`  | On every keystroke                         | Live preview, instant updates |

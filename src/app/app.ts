@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
@@ -18,6 +18,18 @@ export class App {
 
   a: number = 20;
   name: string = 'PRASANTH';
+
+  temp = signal(10);
+
+  constructor() {
+    effect(() => {
+      console.log(this.temp());
+    });
+  }
+
+  handleInc() {
+    this.temp.set(this.temp() + 1);
+  }
 
   save() {
     console.log('Save the data');

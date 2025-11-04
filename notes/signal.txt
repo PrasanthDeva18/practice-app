@@ -1,0 +1,29 @@
+what are signals?
+type of signals?
+define signals?
+update signals value?
+make a counter example of signals?
+
+signal -wrapper around a value, are reactive
+
+to store any kind of value
+
+writable signals
+computable signals
+
+a = signal(0)
+
+constructor() {
+    effect(()=>{
+        console.log(this.a())
+    })
+}
+
+handleClickInc() {
+    this.a.set(100)
+    this.a.set(a() + 1)
+}
+
+.html
+{{a()}}
+

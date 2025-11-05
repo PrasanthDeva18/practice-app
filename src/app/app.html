@@ -1,6 +1,9 @@
 <h1>Hello World</h1>
 {{ title }}
 
+<input [(ngModel)]="nameVal" />
+<p>{{ nameVal }}</p>
+
 <button (click)="save()">Submit</button>
 <button (click)="clickToPrint(true)">Click To Print</button>
 <app-login></app-login>
@@ -15,3 +18,10 @@
 <p>Signals</p>
 <p>{{ temp() }}</p>
 <button (click)="handleInc()">Inc Value</button>
+
+<p>Types of Signals</p>
+<h1>{{ b1() }}</h1>
+<h1>{{ b2() }}</h1>
+<h1>{{ b3() }}</h1>
+
+<app-signals></app-signals>

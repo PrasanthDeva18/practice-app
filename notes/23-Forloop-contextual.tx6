@@ -1,0 +1,20 @@
+What are contextual variable
+
+$count, $index, $last, $first, $odd and $even, empty block with for loop
+
+
+
+$first to access the first item of the array to print
+$last to access the last item of the array to print
+$odd to access the odd items
+$even to access the even items
+
+@for(item of values; track item; let e = $even; let o =$odd){
+
+} @empty(){
+
+//No record found
+}
+
+
+empty block with for loop = 

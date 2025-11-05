@@ -53,7 +53,7 @@ ng help - to get a commands
 
 ng new appname - it will create new fresh application
 ng serve - to run the application
-ng generate componentname - to create the component
+ng generate c componentname - to create the component
 ng generate pipe loginpipe - to create the pipe
 ng build - it will create the build file
 

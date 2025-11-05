@@ -1,0 +1,36 @@
+define signals
+data type for signals
+data type for values
+update signals - set Method, Update Method
+
+
+generics in signal
+
+a = signal<number | string>(5);
+
+a :WritableSignal<number|string> = signal()
+
+
+computed signal is read only
+
+count: Signal<type> = computed(() => 10);
+
+| Type         | Can update manually?    | Derived automatically? | Example                       |
+| ------------ | ----------------------- | ---------------------- | ----------------------------- |
+| `signal()`   | ✅ Yes (`set`, `update`) | ❌ No                   | `signal(5)`                   |
+| `computed()` | ❌ No                    | ✅ Yes                  | `computed(() => count() * 2)` |
+
+
+in signal update will be work on for single data type , if we want to work on multiple data type we can use 
+
+
+| Feature                           | 🧱 Normal Variable                        | ⚡ Signal                                                     |
+| --------------------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| Declaration                       | `let count = 0;`                          | `const count = signal(0);`                                   |
+| How to read value                 | `count`                                   | `count()`                                                    |
+| How to change value               | `count = 5;`                              | `count.set(5);` or `count.update(v => v + 1);`               |
+| Reactive?                         | ❌ No — Angular won’t know when it changes | ✅ Yes — Angular **automatically detects** and updates the UI |
+| Used in Template                  | `{{ count }}`                             | `{{ count() }}`                                              |
+| Part of Angular reactivity system | ❌ No                                      | ✅ Yes                                                        |
+| Triggers re-render                | ❌ No                                      | ✅ Yes                                                        |
+

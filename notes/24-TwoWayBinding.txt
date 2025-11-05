@@ -1,0 +1,19 @@
+What is two way binding?
+Make Input field for two way binding?
+import forms module?
+apply ngmodel
+
+
+two way data biding pass value to component -> view and view -> component
+
+first need to import formmodule in app component
+
+
+then [(ngModel)] = "variablename" 
+
+
+| Type                       | Direction          | Example                                |
+| -------------------------- | ------------------ | -------------------------------------- |
+| One-way (property binding) | Component → View   | `[value]="name"`                       |
+| One-way (event binding)    | View → Component   | `(input)="name = $event.target.value"` |
+| **Two-way binding**        | 🔁 Both directions | `[(ngModel)]="name"`                   |

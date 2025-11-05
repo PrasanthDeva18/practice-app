@@ -1,0 +1,22 @@
+<p>signals works!</p>
+
+<p>Add Todo</p>
+
+<input #taskInput type="text" />
+<button (click)="addTodo(taskInput.value)">add value</button>
+
+@for (item of a(); track $index; let a = $index) {
+<p>{{ a }}</p>
+<p>{{ item }}</p>
+<button (click)="removeTodo(a)">remove todo</button>
+}
+
+<p>Example for computed signal</p>
+
+<p>{{ tPendingFeeSchool() }}</p>
+
+<input #snInput type="text" />
+<input #scInput type="number" />
+<input #sfInput type="number" />
+
+<button (click)="addStudent(snInput.value, scInput.value, sfInput.value)">Add Student</button>

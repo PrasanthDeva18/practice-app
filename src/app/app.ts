@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
@@ -7,9 +7,22 @@ import { Input } from './input/input';
 import { IfElse } from './if-else/if-else';
 import { SwitchCase } from './switch-case/switch-case';
 import { ForLoop } from './for-loop/for-loop';
+import { Signals } from './signals/signals';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, Counter, Input, IfElse, SwitchCase, ForLoop],
+  imports: [
+    RouterOutlet,
+    Login,
+    ProfileComponent,
+    Counter,
+    Input,
+    IfElse,
+    SwitchCase,
+    ForLoop,
+    Signals,
+    FormsModule,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -21,10 +34,25 @@ export class App {
 
   temp = signal(10);
 
+  nameVal = 'prasanth';
+
+  //Data types in signal
+
+  b1 = signal<string | number>(20);
+
+  b2: WritableSignal<string | number> = signal(100);
+
+  b3: Signal<number> = computed(() => 20);
+
   constructor() {
     effect(() => {
       console.log(this.temp());
     });
+  }
+
+  updateSignal() {
+    this.b1.set('prasanth');
+    this.b2.set('prasanth deva');
   }
 
   handleInc() {

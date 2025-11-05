@@ -1,0 +1,18 @@
+Effect in angular
+get updated signal in Effect
+effect uses - toggle element, settimeout
+
+
+
+effect it will perform the side effects it used when we fetch the data from api call
+
+Logging to console
+Making an HTTP call
+Updating localStorage
+Syncing data with a server
+
+constructor() {
+    effect(()=>{
+        console.log("Hii");
+    })
+}

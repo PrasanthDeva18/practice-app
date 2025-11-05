@@ -26,3 +26,15 @@ So if one user changes, Angular only updates that user’s DOM element — not a
 <p>{{ i.age }}</p>
 <button (click)="triggeredBy(i.name)">click to view</button>
 }
+
+<p>Contextual variables in loop</p>
+@for (item of item; track $index;let i = $index; let o = $odd; let e = $even; let f = $first; let
+last = $last; let c = $count) { @if(e){
+<p style="background-color: gainsboro">this is id:{{ i }} and name is {{ item }}</p>
+
+} @else if (o) {
+<p style="background-color: wheat">this is id:{{ i }} and name is {{ item }}</p>
+
+} } @empty() {
+<p>No Record fount</p>
+}

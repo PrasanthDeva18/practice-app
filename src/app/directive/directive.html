@@ -1,0 +1,26 @@
+<p>directive works!</p>
+
+<ul>
+  <li *ngFor="let user of userArr">
+    {{ user }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of userArrs">
+    {{item?.[0]}}
+  </li>
+</ul>
+
+<div *ngIf="show">Hello World</div>
+<button (click)="toggle()">{{ show ? 'Hide' : 'Show' }}</button>
+
+<button (click)="toggleLogin()">
+  {{ isLoggedIn ? 'Logout' : 'Login' }}
+</button>
+
+<!-- if-else -->
+<p *ngIf="isLoggedIn; else loggedOut">✅ Welcome back, user!</p>
+<ng-template #loggedOut>
+  <p>❌ Please log in to continue.</p>
+</ng-template>

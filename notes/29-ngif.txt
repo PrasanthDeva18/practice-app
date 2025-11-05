@@ -1,0 +1,46 @@
+*ngIf - its an angular structural directive, it will used for check the conidtion to show the ui
+
+
+<div *ngIf="show">prasanth</div>
+
+
+<div *ngIf="block == 1">prasanth deva</div>
+<div *ngIf="block == 2">prasanth vennila</div>
+
+<button (click)="handleBlock(1)">Block1</button>
+<button (click)="handleBlock(2)">Block2</button>
+
+*ngIf="condition; else elseBlock"
+
+<ng-template #elseBlock>
+<button>hello</button>
+</ng-template>
+
+then
+*ngIf="condition; then thenBlock; else elseBlock"
+<ng-template #elseBlock>
+<button>hello</button>
+</ng-template>
+
+
+
+.ts
+
+show = true;
+
+block = 0;
+
+handleBlock(val:number){
+    this.block = val;
+}
+
+ng-container:
+
+
+| Feature         | `<ng-container>`                                         |
+| --------------- | -------------------------------------------------------- |
+| Renders in DOM? | ❌ No                                                     |
+| Purpose         | Group elements or directives logically                   |
+| Common use      | Combine multiple structural directives, avoid extra tags |
+| Replacement for | Temporary wrapper `<div>` or `<span>`                    |
+| Works with      | `*ngIf`, `*ngFor`, `*ngSwitch`, etc.                     |

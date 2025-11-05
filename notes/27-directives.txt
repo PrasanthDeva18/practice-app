@@ -1,0 +1,37 @@
+what is directives in angular
+
+
+directive is a js class -> it will provide additional behaviour element of the angular application
+
+it is an one of the feature in angular it will provide more power to dom elements
+
+
+if-else condtion
+
+for loop, add style, ngif, ngfor,ngstyle,ngswitch and ngclass
+
+structural directive - ngif, ngfor, ngswitch
+behavioural directive - ngstyle, ngclass
+
+component directive - used in component file - @Component, 
+structural directive - change the struture of dom by adding, remove or manipulating elements - ngSwitch, ngIf, ngFor
+attributes directive - modify the appearance or behaviour of existing element - ngStyle, ngClass
+
+
+if you using directive first initalize in appcomponent if you are using directive
+
+import NgIf from "angular/common";
+
+@Component(({
+    imports:[NgIf],
+}));
+
+export class AppComponent {
+    show=true
+}
+
+
+.html 
+
+<p *ngIf="show">Hello World</p> 
+

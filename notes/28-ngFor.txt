@@ -1,0 +1,9 @@
+what is ngFor?
+
+ngFor is the structural directive in angular it will for used for loop over the html element
+
+if you used the ngFor or any must declared in the specific component
+
+<ul>
+<li  *ngFor="let x of arr">{{x}}</li>
+</ul>

@@ -9,9 +9,13 @@ import { SwitchCase } from './switch-case/switch-case';
 import { ForLoop } from './for-loop/for-loop';
 import { Signals } from './signals/signals';
 import { FormsModule } from '@angular/forms';
+import { Directive } from './directive/directive';
+import { NgFor } from '@angular/common';
+
 @Component({
   selector: 'app-root',
   imports: [
+    NgFor,
     RouterOutlet,
     Login,
     ProfileComponent,
@@ -22,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     ForLoop,
     Signals,
     FormsModule,
+    Directive,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

@@ -1,0 +1,20 @@
+.html
+<h1 [style.color]="color">Hello World</h1>
+<h1 [style.backgroundColor]="bgColor">Hello World</h1>
+<h1 [style.fontSize] = "fSize">Hellow</h1>
+<h1 [style.fontSize] = "'10px'">prasnth</h1>
+
+.ts
+color = 'red'
+bgColor= 'wheat'
+fSize='10px'
+
+
+writing a condition inside the attr
+
+fSizeBig='10px'
+fSizeSmall='8px'
+
+<h1 [style.fontSize] = "zoom ?fSizeBig: fSizeSmall"> hello world</h1>
+
+[style.fontSize.px] directly access the px

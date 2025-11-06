@@ -1,0 +1,5 @@
+[ngSwitch]="statement"
+*ngSwitchCase="'value'"
+*ngSwitchDefault
+
+in ngSwith wrapped with square bracket

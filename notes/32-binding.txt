@@ -1,0 +1,5 @@
+| Symbol      | Type             | Description                             | Example                  |
+| ----------- | ---------------- | --------------------------------------- | ------------------------ |
+| `[prop]`    | Property Binding | Bind data **from component → template** | `[value]="username"`     |
+| `(event)`   | Event Binding    | Listen for DOM or directive events      | `(click)="onClick()"`    |
+| `[(model)]` | Two-Way Binding  | Combine both (get + set)                | `[(ngModel)]="username"` |

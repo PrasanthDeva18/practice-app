@@ -1,5 +1,5 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
 import { Counter } from './counter/counter';
@@ -11,22 +11,24 @@ import { Signals } from './signals/signals';
 import { FormsModule } from '@angular/forms';
 import { Directive } from './directive/directive';
 import { NgFor } from '@angular/common';
+import { Nav } from './nav/nav';
 
 @Component({
   selector: 'app-root',
   imports: [
-    NgFor,
     RouterOutlet,
-    Login,
-    ProfileComponent,
-    Counter,
-    Input,
-    IfElse,
-    SwitchCase,
-    ForLoop,
-    Signals,
-    FormsModule,
-    Directive,
+    RouterLink,
+    Nav,
+    // Login,
+    // ProfileComponent,
+    // Counter,
+    // Input,
+    // IfElse,
+    // SwitchCase,
+    // ForLoop,
+    // Signals,
+    FormsModule, //if we are using ngmodel must formmodule configure
+    // Directive,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

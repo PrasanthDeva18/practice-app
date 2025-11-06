@@ -24,3 +24,10 @@
 <ng-template #loggedOut>
   <p>❌ Please log in to continue.</p>
 </ng-template>
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'textred'" [style.backgroundColor]="bgColor">Prasanth</p>
+  <p *ngSwitchCase="'textgreen'" [style.backgroundColor]="bgColor">Vennila</p>
+  <p *ngSwitchCase="'textyellow'" [style.backgroundColor]="bgColor">Deva</p>
+  <p *ngSwitchDefault>hello no color found</p>
+</div>

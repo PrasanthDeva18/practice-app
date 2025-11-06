@@ -1,0 +1,14 @@
+in angular routing 
+
+first we need configure routeroutlet and routerlink in app component
+
+
+if we are using routerlink in seprate we need must import on that component
+
+
+routeroutlet - its an wrapper
+routerlink - for navigation in anchor
+routerLinkActive to find out active route
+routerLinkActiveOptions="{exact:true}" it will be used to find match the exact active route mostly in usecase of home page by default it will /
+
+404 for page using path in route file as path:'**'

@@ -29,4 +29,9 @@
 <!-- <app-directive></app-directive> -->
 
 <app-nav></app-nav>
+
 <router-outlet></router-outlet>
+
+@for(x of tempData; track x.id ){
+<a routerLink="user/{{ x.id }}">{{ x.name }}</a>
+}

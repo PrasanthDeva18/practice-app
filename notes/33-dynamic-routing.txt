@@ -1,0 +1,15 @@
+Dynamic routing in angular
+
+<a routerLink="user/{{id}}"></a>
+
+for creating dynamic routing 
+
+in the app.routes.ts file to create the route path for that component path:'user/:id'
+
+then add it route list as match whick one is clicked using routerLink="user/{{id}}"
+
+in the rendered component
+
+should configure the activatedRoute in consturctor and this,params.subscribe((params)=>{
+
+})

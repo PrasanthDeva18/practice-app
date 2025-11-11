@@ -1,0 +1,8 @@
+pass data from one page to another
+
+pass data with router link
+pass data with button click
+pass data with router
+
+
+params.mapParam

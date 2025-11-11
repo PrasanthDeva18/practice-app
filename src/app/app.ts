@@ -36,6 +36,21 @@ import { Nav } from './nav/nav';
 export class App {
   protected readonly title = signal('learning-angular');
 
+  tempData = [
+    {
+      id: 1,
+      name: 'prasanth',
+    },
+    {
+      id: 2,
+      name: 'vennila',
+    },
+    {
+      id: 3,
+      name: 'deva',
+    },
+  ];
+
   a: number = 20;
   name: string = 'PRASANTH';
 

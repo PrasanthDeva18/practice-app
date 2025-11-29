@@ -19,8 +19,8 @@ a = ['Prasanth', 'Deva', 'Vennila']
 if you want get more value use for directive
 
 @for(variablename of iteratearr;track variablename;let id=$index){
-
-}
+    
+}  
 
 
 

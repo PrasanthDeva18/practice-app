@@ -1,0 +1,17 @@
+all the elements are controlled by the template file
+
+
+<p>template-form works!</p>
+<form #userdetails="ngForm" (ngSubmit)="addUser(userdetails.value)">
+  <input type="text" ngModel name="name" />
+  <input type="text" ngModel name="pass" />
+  <button>submit</button>
+</form>
+
+
+
+<input required #name="ngModel" type="text" ngModel name="name" />
+<span *ngIf="name.invalid && name.touched"> show</span>
+
+
+[disabled]="userdetails.invalid" -> in button to disabled

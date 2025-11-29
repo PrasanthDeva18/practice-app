@@ -1,0 +1,125 @@
+creation 
+constructor is a method, it is running when component created 
+
+change detection
+ngOnInit() -> it will runs once after the component initialized
+
+rendering
+
+afterNextRender->
+
+afterRender -> 
+
+
+destruction 
+ngOnDestroy - the component remove from ui it will runs 
+
+
+
+🔶 1. CREATION PHASE
+
+This phase occurs when Angular first creates the component instance.
+
+a) constructor()
+
+The constructor is the first method to run.
+
+It is used mainly for dependency injection, such as injecting services.
+
+The component is not yet fully initialized, and DOM elements are not available.
+
+Heavy tasks like API calls should not be performed here.
+
+b) ngOnChanges()
+
+This hook runs whenever the input properties (@Input) of a component change.
+
+It is called before ngOnInit.
+
+It helps in responding to changes coming from the parent component.
+
+c) ngOnInit()
+
+Runs only once after the component is initialized.
+
+This is the ideal place for:
+
+API calls
+
+Initial data loading
+
+Setting default values
+
+It guarantees that Angular has set up all inputs before execution.
+
+🔶 2. CHANGE DETECTION PHASE
+
+Angular continuously checks for changes in data and updates the UI accordingly.
+
+ngDoCheck()
+
+A custom change detection hook.
+
+Runs frequently whenever Angular detects any change.
+
+Used when ngOnChanges is not enough to detect deeper changes.
+
+🔶 3. RENDERING PHASE
+
+Angular renders the component’s template and updates the DOM.
+
+In Angular 16+, two new rendering lifecycle methods were introduced:
+
+a) afterNextRender()
+
+Runs only once after the component is rendered for the first time.
+
+Similar to ngAfterViewInit().
+
+Useful for reading DOM values or performing tasks after the first UI display.
+
+b) afterRender()
+
+Runs after every render cycle.
+
+Useful when you want code to execute whenever the DOM updates.
+
+Angular's classic rendering hooks are still important:
+
+c) ngAfterContentInit()
+
+Runs once after Angular projects external content using <ng-content>.
+
+d) ngAfterContentChecked()
+
+Runs after every check of projected content.
+
+e) ngAfterViewInit()
+
+Called once when the component’s view and child views are fully initialized.
+
+Safe place to access child components or DOM elements using ViewChild.
+
+f) ngAfterViewChecked()
+
+Runs after every view check.
+
+Useful for debugging render cycles.
+
+🔶 4. DESTRUCTION PHASE
+ngOnDestroy()
+
+Runs when the component is removed from the DOM or user navigates away.
+
+Used to perform cleanup tasks like:
+
+Unsubscribing from Observables
+
+Clearing intervals and timeouts
+
+Removing event listeners
+
+Prevents memory leaks and ensures application performance.
+
+
+

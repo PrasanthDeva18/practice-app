@@ -1,0 +1,71 @@
+when to use reactive forms
+make a html forms
+import and use reactive forms
+get value from input fields
+update value in input fields
+set default value
+
+int app.c.ts
+
+import the reactiveformmodule
+
+
+take up the formcontrol
+name = new formControl();
+age = new formControl();
+
+
+<input [formControl] ="name"/>
+{{name.values}}
+
+
+getValue -> this.name.value
+setvalue this.name.setValue('')
+
+default value also possible
+
+name = new formControl('prasanth')
+
+formGrouping in reactive form
+
+organization and readbility
+validation and error handling
+accessing group values
+
+
+
+<form [formGroup]="profileform" (ngsubmit)="submitData()">
+<input formControlName="name"/>
+</form>
+
+
+ts
+
+profileform = new FormGroup({
+    name : new FormControl(),
+    age: new FormControl()
+})
+
+
+submitData(){
+console.log("submitted data", this.profileform.value)
+}
+
+
+// setvalues in formGroup
+
+this.profileform.setvalue({
+    name : '',
+    passsword:''
+})
+
+
+validation in reactive form
+
+profileform = new FormGroup({
+    name : new FormControl('', [validator.required]),
+    age: new FormControl('', [validator.required, validator.minLenght(5)])
+})
+
+
+

@@ -1,0 +1,24 @@
+types of form in angular 
+
+reactive form and template driven form
+
+
+reactive form - little bit complex this is more scalable, reusaable and testable
+template driven form - we can use in less number of inputs
+
+
+reactive -> created in comp classes 
+template > create by directves
+
+data model in - structure and immutuable - unstrcuted and mutuable
+
+data flow - synchronous  - asynchronous
+
+form validation - function  and directives
+
+
+
+
+
+
+

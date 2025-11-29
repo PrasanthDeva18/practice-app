@@ -1,0 +1,58 @@
+pass data with router link
+
+<a [routerLink]="['profile', {name : 'prasanth}]">go to</a>
+
+constructor(private route:ActivatedRoute){
+
+}
+
+
+ngOnInit(){
+    let user = this.route.snapshot.paramMap.get('name)
+}
+
+pass data with button
+
+<button (click)="goto()">nav</button>
+
+ts
+
+import from angular/router
+
+
+constructor(private route:Router)
+{
+
+}
+
+
+
+goto(){
+    this.route.navigate(['profile',{queryParams:{name : 'Prasnaht'}}])
+}
+
+
+profile.ts
+
+
+ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+        console.log(params)
+    })
+}
+
+
+pass data with router file
+
+inside the route
+
+{path:'', component:.., data: {name : 'prasanth'}}
+
+
+
+profile.ts
+ngOnInit(){
+    this.route.data.subscribe((data) => {
+        console.log(data)
+    })
+}

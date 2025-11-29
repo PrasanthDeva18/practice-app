@@ -63,3 +63,9 @@ ng generate class
 ng generate gaurd
 ng generate 
 
+zoneless was introduced in angular v16
+
+it doesnt automatically triggeres the ui 
+
+
+

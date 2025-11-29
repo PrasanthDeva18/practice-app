@@ -1,0 +1,22 @@
+Pipes transform the output value in HTML view without changing the actual data.
+
+| Pipe        | What It Does                      |
+| ----------- | --------------------------------- |
+| `date`      | Formats dates                     |
+| `uppercase` | Converts text to UPPERCASE        |
+| `lowercase` | Converts text to lowercase        |
+| `currency`  | Formats number as currency        |
+| `json`      | Displays object in JSON format    |
+| `async`     | Works with Observables / Promises |
+
+CUSTOM PIPES IN ANGULAR
+
+ng g pipe pipe/currencyConvertor
+
+import the currencyConvertor pipe in app particular component
+
+
+HTML
+{{amount | currencyConvertor }}
+
+{{amount | currencyConvertor:20 }} args as array

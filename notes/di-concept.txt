@@ -1,0 +1,83 @@
+What is DI?
+Why DI?
+HOW DI?
+
+
+A class gets the objects it needs from outside instead of creating them itself.
+
+--without DI
+class UserComponent {
+  service = new UserService();
+}
+
+with DI
+
+class UserComponent {
+  constructor(private service: UserService) {}
+}
+
+service to component injection
+Service-to-Service Injection
+
+
+Angular service have providesin 'root' it is the provides the service to root provider, we can access where we want 
+component level provider also there 
+
+in the @component decorator to add providers : in the [{provide : UserService, useClass : userService}] its provide the service only in component
+
+in the service we removed the root level provider but that service used in the another service how can we make it usable means - make it provider inside the app.config file, if config in the app.config file then remove in the component level provide as well if need
+
+
+use of useFactory and useValue 
+
+{provide : "App_version" , useValue : 20.1} - app.config
+
+in component 
+
+@Inject("App_version") private version:string - inside constructor
+
+useFactory - for runtime value 
+
+returnVal () {
+    return 10
+}
+
+{provide : "VALUE_RETURN" , useFactory : returnVal} - app.config
+
+in component 
+
+@Inject("VALUE_RETURN") private value_return:string - inside constructor
+
+
+injection token and configuration token
+
+
+
+in app.config
+
+
+export interface appConfig {
+    api_url : string,
+    app_version:string;
+    featureFlag : boolean;
+}
+
+
+
+export const APP_CONFIG = new InjectionToken<appConfig>('app.config',{
+    provideIn : 'root',
+    factory : () => ({
+        api_url : 'http',
+        app_version : 20,
+        featureFlag : true,
+    })
+
+})
+
+
+create a service for seprate appconfig 
+
+private appConfig = inject(APP_CONFIG)
+
+
+in that service use that app_config

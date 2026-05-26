@@ -16,6 +16,7 @@ class UserComponent {
   constructor(private service: UserService) {}
 }
 
+
 service to component injection
 Service-to-Service Injection
 

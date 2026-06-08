@@ -1,0 +1,58 @@
+<!-- <p>{{ count() }}</p>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button> -->
+<!-- <button (click)="reset()">Reset</button> -->
+
+<!-- <app-lifecycle [valCount]="count()"></app-lifecycle> -->
+
+<!-- TODO -->
+
+<input #todoVal type="text" />
+<button (click)="addTodo(todoVal.value)">Add Todo</button>
+
+<table>
+  <caption>
+    Monthly Sales Report
+  </caption>
+
+  <thead>
+    <tr>
+      <th>S.NO</th>
+      <th>Todo Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of taskData(); track item.id) {
+      @if (item.id !== 0) {
+        <tr>
+          <td>
+            {{ item.id }}
+          </td>
+
+          <td>
+            @if (editModeId === item.id) {
+              <input #todoEditVal [value]="item.taskName" />
+              <button (click)="saveUpdateTodo(item.id, todoEditVal.value)">Save</button>
+            } @else {
+              {{ item.taskName }}
+            }
+          </td>
+
+          <td>
+            @if (editModeId !== item.id) {
+              <button (click)="editTodo(item.id)">Edit</button>
+            } @else {
+              <p>Appears after edit mode save</p>
+            }
+          </td>
+
+          <td><button (click)="deleteTodo(item.id)">Delete</button></td>
+        </tr>
+      }
+    } @empty {
+      <p>No Record found</p>
+    }
+  </tbody>
+</table>

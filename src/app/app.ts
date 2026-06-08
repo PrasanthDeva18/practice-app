@@ -7,11 +7,13 @@ import { Input } from './input/input';
 import { IfElse } from './if-else/if-else';
 import { SwitchCase } from './switch-case/switch-case';
 import { ForLoop } from './for-loop/for-loop';
-import { Signals } from './signals/signals';
+// import { Signals } from './signals/signals';
 import { FormsModule } from '@angular/forms';
 import { Directive } from './directive/directive';
 import { NgFor } from '@angular/common';
 import { Nav } from './nav/nav';
+import { Signals } from './recall/signals/signals';
+import { Pipes } from './recall/pipes/pipes';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,8 @@ import { Nav } from './nav/nav';
     // IfElse,
     // SwitchCase,
     // ForLoop,
-    // Signals,
+    Signals,
+    Pipes,
     FormsModule, //if we are using ngmodel must formmodule configure
     // Directive,
   ],

@@ -1,0 +1,66 @@
+Pipes transform the output value in HTML view without changing the actual data.
+
+| Pipe        | What It Does                      |
+| ----------- | --------------------------------- |
+| `date`      | Formats dates                     |
+| `uppercase` | Converts text to UPPERCASE        |
+| `lowercase` | Converts text to lowercase        |
+| `currency`  | Formats number as currency        |
+| `json`      | Displays object in JSON format    |
+| `async`     | Works with Observables / Promises |
+
+CUSTOM PIPES IN ANGULAR
+
+ng g pipe pipe/currencyConvertor
+
+import the currencyConvertor pipe in app particular component
+
+HTML
+{{amount | currencyConvertor }}
+
+{{amount | currencyConvertor:20 }} args as array
+
+Inbuilt Pipes
+
+uppercase
+lowercase
+titlecase
+
+date:''
+currency:''
+percent
+decimal(number) : '' - {{ value | number:'minIntegerDigits.minDecimalDigits-maxDecimalDigits' }}
+
+json
+slice
+async
+keyvalue
+
+i18nPlural
+i18nSelect
+
+| Symbol | Meaning          | Example |
+| ------ | ---------------- | ------- |
+| `dd`   | Day (2 digits)   | 04      |
+| `d`    | Day              | 4       |
+| `MM`   | Month (2 digits) | 06      |
+| `MMM`  | Month short      | Jun     |
+| `MMMM` | Month full       | June    |
+| `yy`   | Year (2 digits)  | 26      |
+| `yyyy` | Year (4 digits)  | 2026    |
+| `HH`   | Hour (24-hour)   | 16      |
+| `hh`   | Hour (12-hour)   | 04      |
+| `mm`   | Minutes          | 30      |
+| `ss`   | Seconds          | 45      |
+| `a`    | AM/PM            | PM      |
+
+
+| Format    | Output Example |
+| --------- | -------------- |
+| `'1.0-0'` | 1,235          |
+| `'1.1-1'` | 1,234.6        |
+| `'1.2-2'` | 1,234.57       |
+| `'1.2-4'` | 1,234.5678     |
+| `'3.2-2'` | 001,234.57     |
+
+

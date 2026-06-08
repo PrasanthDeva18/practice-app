@@ -1,0 +1,52 @@
+<p>pipes works!</p>
+
+<!-- <form>
+  <input  />
+  <input />
+  <input />
+  <input />
+  <button>Save Details</button>
+</form> -->
+
+<p>{{ userName | uppercase }}</p>
+<p>{{ userName | lowercase }}</p>
+<p>{{ userName | titlecase }}</p>
+
+<!-- Date format -->
+
+{{ joinedDate | date }}
+
+{{ joinedDate | date: 'dd-MM-yyyy' }}
+{{ joinedDate | date: 'd-M-yyyy' }}
+{{ joinedDate | date: 'yyyy-d-M' }}
+
+<p>{{ joinedDate | date: 'fullDate' }}</p>
+{{ joinedDate | date: 'longDate' }}
+{{ joinedDate | date: 'shortDate' }}
+
+{{ joinedDate | date: 'hh:mm:ss a' }}
+
+{{ employeeDetails | json }}
+{{ empInOfficePercentage | percent }}
+
+{{ empQuaterInc | number: '1.1-2' }}
+
+{{ 'Prasanth' | reverse }}
+
+<!-- @for (item of employeeDetails | keyvalue; track item.key) {
+  <p>{{ item.key }} | {{ item.value }}</p>
+  <div>
+    @for (item of item.value | keyvalue; track $index) {
+      <p>{{ item.key }} | {{ item.value }}</p>
+    }
+  </div>
+} -->
+
+@for (item of employeeDetails | slice: 0 : 2; track item.empId) {
+  <!-- <p>{{ item.key }} | {{ item.value }}</p> -->
+  <div>
+    @for (rec of item | keyvalue; track $index) {
+      <p>{{ rec.key }} | {{ rec.value }}</p>
+    }
+  </div>
+}

@@ -1,0 +1,12 @@
+Interpolation - {{}} - Component → HTML - displays data in html
+Event binding  - () - Handles user actions. example image, ngClass
+Property biding  - [] -  Sets an HTML property. 
+Ng Model - [()] - Data flows in both directions.
+
+
+| Binding          | Direction        |
+| ---------------- | ---------------- |
+| Interpolation    | Component → View |
+| Property Binding | Component → View |
+| Event Binding    | View → Component |
+| Two-Way Binding  | Component ↔ View |

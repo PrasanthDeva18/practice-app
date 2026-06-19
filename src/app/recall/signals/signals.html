@@ -1,6 +1,6 @@
-<!-- <p>{{ count() }}</p>
+<p>{{ count() }}</p>
 <button (click)="increment()">Increment</button>
-<button (click)="decrement()">Decrement</button> -->
+<button (click)="decrement()">Decrement</button>
 <!-- <button (click)="reset()">Reset</button> -->
 
 <!-- <app-lifecycle [valCount]="count()"></app-lifecycle> -->
@@ -56,3 +56,15 @@
     }
   </tbody>
 </table>
+
+<ng-container *ngIf="count() === 1; then success; else error">
+</ng-container>
+
+<ng-template #success>
+  <p>Yes it's sucess</p>
+</ng-template>
+
+<ng-template #error>
+  <p>Yes it's fails</p>
+</ng-template>
+

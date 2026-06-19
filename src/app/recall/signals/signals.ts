@@ -1,13 +1,16 @@
+import {  NgIf } from '@angular/common';
 import { Component, signal, computed, effect, Injector, inject, untracked } from '@angular/core';
 
 @Component({
   selector: 'app-signals',
-  imports: [],
+  imports: [NgIf],
   templateUrl: './signals.html',
   styleUrl: './signals.css',
 })
 export class Signals {
   count = signal(0);
+
+
 
   injector = inject(Injector);
 
@@ -57,6 +60,12 @@ export class Signals {
   taskData = signal<any[]>([]);
 
   editModeId!: number;
+
+  stuObj = [
+    {id : 1, name : 'Prasanth'},
+    {id : 2, name : 'vennila'},
+    {id : 3}
+  ]
 
   addTodo(value: string) {
     console.log(value);

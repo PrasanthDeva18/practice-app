@@ -50,3 +50,86 @@
     }
   </div>
 }
+
+{{ ageArr | transformlogic | json }}
+
+<button (click)="toShowMenu()">Show Menu</button>
+
+@if (isShowMenu && roleName.toLowerCase() === 'admin') {
+  <ol>
+    <li>Home</li>
+    <li>Admin Dashboard</li>
+    <li>My Course Listing</li>
+  </ol>
+} @else if (isShowMenu && roleName.toLowerCase() === 'instructor') {
+  <ol>
+    <li>Home</li>
+    <li>My Courses</li>
+    <li>My Learning</li>
+  </ol>
+} @else {
+  <ol>
+    <li>Home</li>
+    <li>Logout</li>
+  </ol>
+}
+
+@for (item of collectionColorCodes; track $index; let i = $index) {
+  @switch (i) {
+    @case (0) {
+      <p [ngStyle]="{ color: item }">Prasanth</p>
+    }
+    @case (1) {
+      <p [ngStyle]="{ color: item }">Prasanth</p>
+    }
+    @case (2) {
+      <p [ngStyle]="{ color: item }">Prasanth</p>
+    }
+    @case (3) {
+      <p [ngStyle]="{ color: item }">Prasanth</p>
+    }
+    @case (4) {
+      <p [ngStyle]="{ color: item }">Prasanth</p>
+    }
+  }
+}
+
+@switch (selectColor) {
+  @case ('#2563EB') {
+    <p [ngStyle]="{ color: selectColor }">Prasanth</p>
+  }
+  @case ('#10B981') {
+    <p [ngStyle]="{ color: selectColor }">Prasanth</p>
+  }
+  @case ('#F59E0B') {
+    <p [ngStyle]="{ color: selectColor }">Prasanth</p>
+  }
+  @case ('#F43F5E') {
+    <p [ngStyle]="{ color: selectColor }">Prasanth</p>
+  }
+  @case ('#8B5CF6') {
+    <p [ngStyle]="{ color: selectColor }">Prasanth</p>
+  }
+}
+
+<p [style.color]="selectColor">Prasanth</p>
+
+<!-- single class -->
+<p [ngClass]="showClassColor ? 'show-red' : 'show-yellow'">Prasanth</p>
+
+<!-- multiple class -->
+<p
+  [ngClass]="{
+    'show-red': showClassColor,
+    'show-yellow': !showClassColor,
+  }"
+>
+  Prasanth
+</p>
+
+<!-- array syntax -->
+ <p [ngClass]="['show-yellow', 'show-red']">Vennila</p>
+
+<!-- dynamic class syntax -->
+  <p [ngClass]="colorClass">Vennila</p>
+

@@ -1,0 +1,73 @@
+Directives 
+
+structural directive - ngif -> @if , ngFor -> @for, ngSwitch -> @switch
+component directive - @component
+behavioural directive - ngClass, ngStyle
+
+
+if with else if and else
+@if(){
+
+} @else if() {
+
+} @else {
+
+}
+
+nested if 
+as alias
+
+index, count, odd, even, first, last
+
+@for(item of itemArr; track item; let i = $index; let count = $count )  {
+
+} @empty {
+
+}
+
+
+@switch() {
+    @case(value) {
+
+    }
+    @default {
+
+    }
+}
+
+ngClass -  ways to apply the class - 
+
+single class, multipe classes, array syntax, dynamic classes
+
+
+ <p [ngClass]="['show-yellow', 'show-red']">Vennila</p> - in array syntax, the css applied based on the css file Which one wins?
+
+It depends on the CSS rule order, not the order in ngClass.
+
+
+ngStyle - ways to apply the styles
+single style , multipe style, dynamic styles
+
+two types of style binding - class binding and style binding
+class.active
+style.color
+
+
+*ngIf -> structural directives older way checking the conidition 
+
+<ng-container *ngIf="condition; then nameRef; else elnameRef"></ng-container>
+
+<ng-template #nameRef></ng-template>
+<ng-template #elnameRef></ng-template>
+
+*ngFor -> print the list of value
+
+<ng-container *ngFor="let x of items; let i = index; let odd = odd; let even = even; let first = first; let last = last;">
+</ng-container>
+
+trackById(index : number, value: string){
+    return value.id
+}
+
+
+

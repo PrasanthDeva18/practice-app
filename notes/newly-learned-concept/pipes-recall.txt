@@ -64,3 +64,50 @@ i18nSelect
 | `'3.2-2'` | 001,234.57     |
 
 
+pure pipes and impure pipes
+
+when ever the input value reference changes the pipe will execute 
+
+A Pure Pipe is a pipe that Angular executes only when the input value or input reference changes.
+Pure Pipes are the default type of pipe and are optimized for performance.
+
+Runs only when:
+
+Primitive value changes (string, number, boolean)
+Object reference changes
+Array reference changes
+
+
+
+in ts file
+
+users = ['prasanth','vennila']
+
+addUsers:
+users.push(
+    'deva'
+)
+
+users -> address a
+
+if just update the same reference its reference is not changes 
+
+when it will execute 
+
+this.users = [
+    ...this.users,
+    'prasa'
+]
+
+users -> address b
+address a - b
+
+
+impure pipe
+An Impure Pipe is a pipe that Angular executes on every change detection cycle, even if the input reference has not changed. it will affects the particular pipe only.
+
+Button Click
+Input Typing
+HTTP Response
+Timer
+Signal Update

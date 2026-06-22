@@ -57,8 +57,7 @@
   </tbody>
 </table>
 
-<ng-container *ngIf="count() === 1; then success; else error">
-</ng-container>
+<ng-container *ngIf="count() === 1; then success; else error"> </ng-container>
 
 <ng-template #success>
   <p>Yes it's sucess</p>
@@ -68,3 +67,14 @@
   <p>Yes it's fails</p>
 </ng-template>
 
+<h1>Ng For</h1>
+
+<ng-container *ngFor="let x of taskData(); let i = index; let o = odd">
+  {{ o }}
+</ng-container>
+
+<div [ngSwitch]="colorStatus">
+  <p *ngSwitchCase="'success'">Green</p>
+  <p *ngSwitchCase="'error'">Red</p>
+  <p *ngSwitchDefault>No Color</p>
+</div>

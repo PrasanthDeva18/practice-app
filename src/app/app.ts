@@ -14,6 +14,7 @@ import { NgFor } from '@angular/common';
 import { Nav } from './nav/nav';
 import { Signals } from './recall/signals/signals';
 import { Pipes } from './recall/pipes/pipes';
+import { Di } from './recall/di/di';
 
 @Component({
   selector: 'app-root',
@@ -30,14 +31,33 @@ import { Pipes } from './recall/pipes/pipes';
     // ForLoop,
     Signals,
     Pipes,
-    FormsModule, //if we are using ngmodel must formmodule configure
-    // Directive,
+    FormsModule,
+    Di,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('learning-angular');
+
+  navRouter = [
+    {
+      headerName: 'Home',
+      link: '/',
+    },
+    {
+      headerName: 'DI',
+      link: '/di',
+    },
+    {
+      headerName: 'Signals',
+      link: '/signals',
+    },
+    {
+      headerName: 'Pipes',
+      link: '/pipes',
+    },
+  ];
 
   tempData = [
     {

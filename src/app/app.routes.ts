@@ -1,12 +1,18 @@
 import { Routes } from '@angular/router';
-import { Signals } from './signals/signals';
+import { Signals } from './recall/signals/signals';
 import { SwitchCase } from './switch-case/switch-case';
 import { Home } from './home/home';
 import { NotFound } from './not-found/not-found';
 import { User } from './user/user';
+import { Di } from './recall/di/di';
+import { Pipes } from './recall/pipes/pipes';
 
 export const routes: Routes = [
   { path: '', component: Home },
+  { path: 'di', component: Di },
+  { path: 'signals', component: Signals },
+  { path: 'pipes', component: Pipes },
+  { path: '', component: Di },
   { path: 'signal-learning', component: Signals },
   { path: 'switch-case', component: SwitchCase },
   { path: 'user/:id', component: User },

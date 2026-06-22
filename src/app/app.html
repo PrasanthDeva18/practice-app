@@ -30,11 +30,19 @@
 
 <!-- <app-nav></app-nav> -->
 
-<!-- <router-outlet></router-outlet> -->
 
-<app-signals></app-signals>
+
+@for (item of navRouter; track item.headerName) {
+  <a [routerLink]="item.link">
+    {{ item.headerName }}
+  </a>
+}
+
+<router-outlet></router-outlet>
+
+<!-- <app-signals></app-signals>
 <app-pipes></app-pipes>
-
+<app-di></app-di> -->
 
 <!-- @for(x of tempData; track x.id ){
 <a routerLink="user/{{ x.id }}">{{ x.name }}</a>

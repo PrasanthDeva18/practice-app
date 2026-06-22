@@ -1,0 +1,12 @@
+<p>di works!</p>
+{{ totalValue }}
+
+<app-di-2 [userName] ="userName" (userData)="viewValue($event)"></app-di-2>
+
+<input #ipval/>
+
+<button (click)="subVal()">Submit Value</button>
+
+<button (click)="addQ()">Add Query Params</button>
+
+<button (click)="mergeQ()">Update Query Params</button>

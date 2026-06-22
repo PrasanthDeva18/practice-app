@@ -82,3 +82,34 @@ private appConfig = inject(APP_CONFIG)
 
 
 in that service use that app_config
+
+
+Injector is an Angular object that creates and provides dependencies (services).
+
+
+injector gives an existing service or creates new one and give it to who can ask
+
+example userservice -> injector check -> it exists if not create new one - return that new instance
+next component calls the same service -> injector check -> it already exists -> return the instance
+
+injector provides --
+inject(HttpClient);
+inject(Router);
+inject(ActivatedRoute);
+inject(FormBuilder);
+inject(MyCustomService);
+
+inject(DiService) - if we use this directly calling injector.get(DiService)
+constructor(private diService: DiService) - 
+
+const diService = injector.get(DiService);
+this.diService = diService;
+
+constructor(@Inject(DiService) private diServiceInjected: DiService)
+
+register in the component remove the providein root in service 
+in the component @component -> providers key to give -> [servicename] or [{provider:servicename,  useClass : servicename}]
+
+that service will be usable in that particular component and dependant component
+
+if its configured in root level remove in the component level provider

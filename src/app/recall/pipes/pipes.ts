@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReversePipe, TransformPipe } from './reverse-pipe';
+import { DI2Service } from '../di/di-2.service';
 
 type EmpDetails = {
   empName: string;
@@ -16,6 +17,7 @@ type EmpDetails = {
   styleUrl: './pipes.css',
 })
 export class Pipes implements OnInit {
+   service = inject(DI2Service).call()
   constructor(private cdr: ChangeDetectorRef) {}
   userName: string = 'Prasanth';
 
@@ -65,5 +67,5 @@ export class Pipes implements OnInit {
 
   showClassColor: boolean = true;
 
-  colorClass = 'show-red'
+  colorClass = 'show-red';
 }

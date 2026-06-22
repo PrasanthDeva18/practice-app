@@ -1,0 +1,88 @@
+Component Communication
+
+Parent Component
+      ↕
+Child Component
+
+@Input - Parent -> Child
+@Output - Child <- Parent
+@ViewChild Parent Access Child Directly
+
+
+@Input 
+
+Parent Component
+
+in ts 
+
+userName = 'Prasanth'
+
+in template
+
+<app-child [userName]='userName'></app-child>
+
+[userName]="'Prasanth'"
+Outer quotes → HTML attribute
+Inner quotes → String value
+
+in the child ts
+
+@Input() name!:string;
+
+alias also there
+
+@Input('userName') name!:string;
+
+required Input 
+
+@Input({ required: true })
+name
+
+required input with alias
+  @Input({
+    required: true,
+    alias: 'userName',
+  })
+  name!: string;
+
+
+  @Output()
+
+  used when child sends event/data to Parent
+
+
+  In Child Component
+  @Output()
+  userData = new EventEmitter()
+
+  updateData() {
+    this.userData.emit({
+    id : "80",
+    name : "Prasanth"
+    })
+  }
+
+
+  in HTML
+
+  <button (click)="updateData()"> click </button>
+
+
+  in Parent Component
+
+  <app-child (userData)="showUserVal($event)"></app-child>
+
+   in component ts
+
+    showUserVal(val){
+        console.log(val)
+    }
+
+
+----
+  @ViewChild
+
+  Direct access to
+- Child methods
+- Child properties
+- DOM elements

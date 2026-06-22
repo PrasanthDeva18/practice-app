@@ -1,14 +1,17 @@
-import {  NgIf } from '@angular/common';
+import { NgIf, NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component, signal, computed, effect, Injector, inject, untracked } from '@angular/core';
 
 @Component({
   selector: 'app-signals',
-  imports: [NgIf],
+  imports: [NgIf, NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './signals.html',
   styleUrl: './signals.css',
 })
 export class Signals {
   count = signal(0);
+
+
+  colorStatus = 'error'
 
 
 

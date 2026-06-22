@@ -65,9 +65,22 @@ style.color
 <ng-container *ngFor="let x of items; let i = index; let odd = odd; let even = even; let first = first; let last = last;">
 </ng-container>
 
+
+ trackBy: trackById
+
 trackById(index : number, value: string){
     return value.id
 }
+
+
+in Ng Switch Case 
+
+-- [ngSwitch]=""
+
+---- ngSwitchCase="''" - if its an string make within double with single quotes
+---- ngSwitchDefault
+
+
 
 
 

@@ -1,0 +1,82 @@
+routerLink - direct value give it as without []
+routerLinkActive - to highlighted the active routerLink
+
+route params
+
+path : 'product/:id'
+in the routerLink=['/product', 100]
+
+how to get the params value in the route
+
+ActivatedRoute 
+
+route = inject(ActivatedRoute)
+
+this.route.snapshot.paramMap.get('id')
+
+snapshot vs observable
+
+if the components render only once and parameters never changes
+Same component to loads and different params - observable
+
+this.route.snapshot.paramMap.get('id') - snapshot
+this.route.params.subscribe(params => console.log(params))
+
+this.route.snapshot.queryParamMap.get('id') - snapshot
+this.route.queryParams
+.subscribe(params => {
+
+  console.log(
+    params['page']
+  );
+
+});
+
+| Snapshot                       | Observable              |
+| ------------------------------ | ----------------------- |
+| One-time value                 | Continuous updates      |
+| Synchronous                    | Asynchronous            |
+| No subscription                | Requires subscription   |
+| Doesn't react to route changes | Reacts to route changes |
+| Simple                         | More flexible           |
+
+
+update the route /di?page=1
+
+ this.router.navigate(['/di'], {
+      relativeTo: this.route,
+      queryParams: {
+        page: 1,
+      },
+    }); 
+
+update the route with new value remove the existing 
+
+/di?offet=1
+
+ this.router.navigate(['/di'], {
+      relativeTo: this.route,
+      queryParams: {
+        offset: 1,
+      },
+}); 
+
+/di?page=1&offet=10 - update the route with existing value
+
+ this.router.navigate(['/di'], {
+      relativeTo: this.route,
+      queryParams: {
+        offset: 10,
+      },
+    queryParamsHandling: 'merge',
+}); 
+
+
+| navigate()              | navigateByUrl()     |
+| ----------------------- | ------------------- |
+| Array-based             | String-based        |
+| Supports route segments | Uses full URL       |
+| Supports `relativeTo`   | No `relativeTo`     |
+| Easier for params       | Good for fixed URLs |
+
+

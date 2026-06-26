@@ -51,11 +51,11 @@ export class App {
     },
     {
       headerName: 'Signals',
-      link: '/signals',
+      link: '/pipes',
     },
     {
       headerName: 'Pipes',
-      link: '/pipes',
+      link: 'pipes',
     },
   ];
 

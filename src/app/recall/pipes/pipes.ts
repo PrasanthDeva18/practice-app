@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReversePipe, TransformPipe } from './reverse-pipe';
 import { DI2Service } from '../di/di-2.service';
+import { Http } from '../http/http';
 
 type EmpDetails = {
   empName: string;
@@ -12,7 +13,7 @@ type EmpDetails = {
 
 @Component({
   selector: 'app-pipes',
-  imports: [CommonModule, ReversePipe, TransformPipe],
+  imports: [CommonModule, ReversePipe, TransformPipe, Http],
   templateUrl: './pipes.html',
   styleUrl: './pipes.css',
 })

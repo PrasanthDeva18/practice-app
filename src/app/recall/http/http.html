@@ -1,1 +1,59 @@
 <p>http works!</p>
+
+<!-- <div>
+  <div>
+    <p>Personal Info</p>
+    <label for="firstName"></label>
+    <input id="firstName" />
+    <label for="lastName"></label>
+    <input id="firstName" />
+    <select name="Select a Gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+    <label for="lastName"></label>
+    <input />
+  </div>
+  <div></div>
+</div> -->
+
+<form [formGroup]="empForm" (ngSubmit)="submit()">
+  <div formGroupName="personalInfo">
+    <label for="first-name">First Name</label>
+    <input id="first-name" formControlName="firstName" />
+
+    @if (empForm.get('personalInfo.firstName')?.hasError('required')) {
+      <p>Please fill the field</p>
+    }
+
+    <label for="last-name">Last Name</label>
+    <input id="last-name" formControlName="lastName" />
+
+    <select formControlName="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+
+    <label for="dob">Date Of Birth</label>
+    <input id="dob" type="date" formControlName="dob" />
+
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" />
+
+    <label for="phone">Phone</label>
+    <input id="phone" />
+
+    <label for="tickactive">
+      <input id="tickactive" type="radio" value="active" formControlName="isActive" /> Active</label
+    >
+
+    <label for="tickactive">
+      <input id="tickactive" type="radio" value="inactive" formControlName="isActive" />
+      InActive</label
+    >
+  </div>
+
+  <input type="submit"/>
+</form>

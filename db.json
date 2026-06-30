@@ -1,0 +1,287 @@
+{
+  "empDetails": [
+    {
+      "empId": 3668,
+      "personalInfo": {
+        "firstName": "Barack",
+        "lastName": "Obama",
+        "gender": "Male",
+        "dob": "24-08-2002",
+        "email": "barack.obama@company.com",
+        "phone": "9876543210",
+        "isActive": true
+      },
+      "department": {
+        "departmentId": "D101",
+        "departmentName": "Engineering",
+        "designation": "Software Engineer",
+        "experience": 3.5
+      },
+      "address": {
+        "current": {
+          "doorNo": "12A",
+          "street": "Anna Nagar",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "country": "India",
+          "pincode": "600040"
+        },
+        "permanent": {
+          "doorNo": "22B",
+          "street": "Main Road",
+          "city": "Madurai",
+          "state": "Tamil Nadu",
+          "country": "India",
+          "pincode": "625001"
+        }
+      },
+      "salary": {
+        "basic": 50000,
+        "hra": 12000,
+        "bonus": 10000,
+        "tax": 4500,
+        "bank": {
+          "bankName": "HDFC",
+          "accountNo": "XXXX1234",
+          "ifsc": "HDFC0001234"
+        }
+      },
+      "skills": [
+        {
+          "name": "Angular",
+          "experience": 3,
+          "rating": 5
+        },
+        {
+          "name": "Node.js",
+          "experience": 2,
+          "rating": 4
+        }
+      ],
+      "projects": [
+        {
+          "projectId": "P1001",
+          "projectName": "Asset Tracker",
+          "role": "Frontend Developer",
+          "status": "Active"
+        },
+        {
+          "projectId": "P1002",
+          "projectName": "HRMS",
+          "role": "Full Stack Developer",
+          "status": "Completed"
+        }
+      ],
+      "emergencyContacts": [
+        {
+          "name": "Michelle",
+          "relationship": "Spouse",
+          "phone": "9000000001"
+        },
+        {
+          "name": "John",
+          "relationship": "Brother",
+          "phone": "9000000002"
+        }
+      ],
+      "documents": {
+        "pan": "ABCDE1234F",
+        "aadhaar": "XXXX-XXXX-1234",
+        "passport": "N1234567"
+      },
+      "id": "AF_oGTG-PXc"
+    },
+    {
+      "empId": 3669,
+      "personalInfo": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "gender": "Male",
+        "dob": "15-03-2001",
+        "email": "john.smith@company.com",
+        "phone": "9876543211",
+        "isActive": true
+      },
+      "department": {
+        "departmentId": "D102",
+        "departmentName": "QA",
+        "designation": "QA Engineer",
+        "experience": 2
+      },
+      "address": {
+        "current": {
+          "city": "Coimbatore",
+          "state": "Tamil Nadu"
+        },
+        "permanent": {
+          "city": "Salem",
+          "state": "Tamil Nadu"
+        }
+      },
+      "salary": {
+        "basic": 45000,
+        "hra": 10000,
+        "bonus": 8000
+      },
+      "skills": [
+        {
+          "name": "Selenium",
+          "rating": 5
+        },
+        {
+          "name": "Postman",
+          "rating": 4
+        }
+      ],
+      "projects": [
+        {
+          "projectName": "Automation Suite",
+          "status": "Active"
+        }
+      ],
+      "id": "IeAMnIFUuqE"
+    },
+    {
+      "empId": 3670,
+      "personalInfo": {
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "isActive": false
+      },
+      "department": {
+        "departmentName": "HR"
+      },
+      "skills": [
+        {
+          "name": "Recruitment"
+        }
+      ],
+      "id": "AQGa_CPxBzA"
+    },
+    {
+      "empId": 3671,
+      "personalInfo": {
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Finance"
+      },
+      "salary": {
+        "basic": 60000
+      },
+      "id": "16gpe3xQaq4"
+    },
+    {
+      "empId": 3672,
+      "personalInfo": {
+        "firstName": "Sophia",
+        "lastName": "Wilson",
+        "isActive": false
+      },
+      "department": {
+        "departmentName": "Marketing"
+      },
+      "id": "BlTEUx7Xrq8"
+    },
+    {
+      "empId": 3673,
+      "personalInfo": {
+        "firstName": "David",
+        "lastName": "Miller",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Support"
+      },
+      "id": "ifRKqgAFM2M"
+    },
+    {
+      "empId": 3674,
+      "personalInfo": {
+        "firstName": "Emma",
+        "lastName": "Taylor",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Engineering"
+      },
+      "id": "yU-X-Hg6tvQ"
+    },
+    {
+      "empId": 3675,
+      "personalInfo": {
+        "firstName": "James",
+        "lastName": "Anderson",
+        "isActive": false
+      },
+      "department": {
+        "departmentName": "DevOps"
+      },
+      "id": "reK7N6XTBA0"
+    },
+    {
+      "empId": 3676,
+      "personalInfo": {
+        "firstName": "Olivia",
+        "lastName": "Thomas",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Security"
+      },
+      "id": "EfQex-ysPjw"
+    },
+    {
+      "empId": 3677,
+      "personalInfo": {
+        "firstName": "William",
+        "lastName": "Martin",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Cloud"
+      },
+      "id": "yTH6ibNReTM"
+    },
+    {
+      "empId": 3678,
+      "personalInfo": {
+        "firstName": "Charlotte",
+        "lastName": "Lee",
+        "isActive": false
+      },
+      "department": {
+        "departmentName": "Design"
+      },
+      "id": "pI_nAZNLVOU"
+    },
+    {
+      "empId": 3679,
+      "personalInfo": {
+        "firstName": "Daniel",
+        "lastName": "Walker",
+        "isActive": true
+      },
+      "department": {
+        "departmentName": "Product"
+      },
+      "id": "4gxipVnpYfM"
+    },
+    {
+      "empId": 3,
+      "personalInfo": {
+        "firstName": "te",
+        "lastName": "te",
+        "gender": "female",
+        "dob": "2026-06-30",
+        "email": "tes",
+        "phone": "",
+        "isActive": "active"
+      },
+      "id": "ZcKBaL5yttI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

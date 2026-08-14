@@ -82,3 +82,56 @@ update the route with new value remove the existing
 | Easier for params       | Good for fixed URLs |
 
 
+
+
+
+routerLink
+    ↓
+Navigate from HTML
+
+
+routerLinkActive
+    ↓
+Highlight active route
+
+
+:param
+    ↓
+Route parameter
+/product/100
+
+
+?key=value
+    ↓
+Query parameter
+/product?page=1
+
+
+ActivatedRoute
+    ↓
+Read current route information
+
+
+snapshot
+    ↓
+Read once
+
+
+observable
+    ↓
+React to route changes
+
+
+navigate()
+    ↓
+Build route from segments
+
+
+navigateByUrl()
+    ↓
+Navigate using complete URL
+
+
+queryParamsHandling: 'merge'
+    ↓
+Preserve existing query params

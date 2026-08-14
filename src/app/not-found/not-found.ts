@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-not-found',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './not-found.html',
   styleUrl: './not-found.css',
 })
-export class NotFound {
+export class NotFound implements OnInit {
+  route = inject(ActivatedRoute);
 
+  id = this.route.snapshot.paramMap.get('id');
+
+  ngOnInit(): void {
+    console.log(this.id);
+  }
 }

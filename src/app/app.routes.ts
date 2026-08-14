@@ -7,6 +7,7 @@ import { User } from './user/user';
 import { Di } from './recall/di/di';
 import { Pipes } from './recall/pipes/pipes';
 import { RecallComponent } from './recall-concepts/recall';
+import { RouteDemo } from './recall-concepts/demo-route/demo';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'signal-learning', component: Signals },
   { path: 'switch-case', component: SwitchCase },
   { path: 'user/:id', component: User },
+  { path: 'product/:id', component: RouteDemo },
   { path: 'recall', component: RecallComponent },
   { path: '**', component: NotFound }, // keep it last only, it will show all other router if you first
 ];

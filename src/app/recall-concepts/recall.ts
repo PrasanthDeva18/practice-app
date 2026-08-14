@@ -1,8 +1,10 @@
 import { Component, effect, signal, untracked } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   templateUrl: './recall.html',
   styleUrl: './recall.css',
+  imports: [RouterLink],
 })
 export class RecallComponent {
   //signals

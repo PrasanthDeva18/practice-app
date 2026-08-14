@@ -10,3 +10,8 @@ Ng Model - [()] - Data flows in both directions.
 | Property Binding | Component → View |
 | Event Binding    | View → Component |
 | Two-Way Binding  | Component ↔ View |
+
+
+
+event binding - submit, click, change, input
+

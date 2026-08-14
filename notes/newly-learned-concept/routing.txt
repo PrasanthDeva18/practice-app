@@ -6,6 +6,8 @@ route params
 path : 'product/:id'
 in the routerLink=['/product', 100]
 
+[routerLinkActiveOptions]="{ exact: true }" matching the exact route
+
 how to get the params value in the route
 
 ActivatedRoute 

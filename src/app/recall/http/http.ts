@@ -31,6 +31,22 @@ export class Http {
       phone: ['', Validators.maxLength(10)],
       isActive: ['', Validators.required],
     }),
+    department: {
+      departmentId: ['', Validators.required],
+      departmentName: ['', Validators.required],
+      designation: ['', Validators.required],
+      experience: [0],
+    },
+    address: {
+      current: {
+        doorNo: [''],
+        street: [''],
+        city: [''],
+        state: [''],
+        country: [''],
+        pincode: '',
+      },
+    },
   });
 
   ngOnInit() {
@@ -42,15 +58,12 @@ export class Http {
   submit() {
     console.log(this.empForm.invalid);
 
-    this.empForm.get('empId')?.setValue(3)
+    this.empForm.get('empId')?.setValue(3);
     this.httpService.addUser(this.empForm.value).subscribe({
       next(value) {
         console.log(value);
       },
-      error(err) {
-        
-      },
-    })
-    
+      error(err) {},
+    });
   }
 }

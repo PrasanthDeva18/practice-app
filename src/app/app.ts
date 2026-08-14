@@ -57,6 +57,10 @@ export class App {
       headerName: 'Pipes',
       link: 'pipes',
     },
+    {
+      headerName: 'Recall',
+      link: 'recall',
+    },
   ];
 
   tempData = [

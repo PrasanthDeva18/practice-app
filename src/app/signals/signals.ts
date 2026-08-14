@@ -9,7 +9,7 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
 export class Signals {
   // Signals are reactive in angular, normal data type will not reactive
 
-  //Writable Signals can we update the value using set and update - set will replace the value, update will act as the
+  //Writable Signals can we update the value using set and update - set will replace the value, update will act as the 
 
   //Computed Signals are readable , it will derived automatically
 

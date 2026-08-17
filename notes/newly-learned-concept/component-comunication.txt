@@ -86,3 +86,40 @@ required input with alias
 - Child methods
 - Child properties
 - DOM elements
+
+
+Input Signal---
+
+name = input<string>();
+
+input.required<string>();
+
+input.required<string>('',{
+alias : 'userName'
+})
+
+
+
+Old Angular
+@Input()
+
+Modern Angular
+input()
+
+
+morden output 
+
+userData = output<{name:string, val: string}>()
+
+
+Parent
+   │
+   │ @ViewChild
+   ↓
+Child instance
+   │
+   ├── properties
+   └── methods
+
+
+

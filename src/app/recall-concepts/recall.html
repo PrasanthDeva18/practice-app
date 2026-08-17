@@ -1,7 +1,11 @@
-<p>Hello world {{a()}}</p>
+<p>Hello world {{ a() }}</p>
 
 <button (click)="updateVal()">Update</button>
 
 <a routerLink="/">Home</a>
 
 <a [routerLink]="['/product', 10]">Home</a>
+
+<app-demo-2 [userName]="userName" (userData)="printVal($event)"> </app-demo-2>
+
+<button (click)="resetVal()">Reset</button>
